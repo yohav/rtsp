@@ -13,7 +13,7 @@ The client should be available at: http://localhost:3000
 The api documentation should be available at: http://localhost:3001/api-docs
 
 ## Configuration:
-Client config file:client\src\config.js
+Client config file: client\src\config.js
 
 Server config file: server\.env
 
