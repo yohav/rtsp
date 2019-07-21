@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.video-frame {
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+}
+
+.stream-link{
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}

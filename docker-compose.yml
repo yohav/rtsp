@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  client:
+    build: .
+    volumes:
+      - "./client:/app"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+
+  server:
+    build: .
+    volumes:
+      - "./server:/app"
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db
+  db:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123123
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./docker/data/db:/mongodb
